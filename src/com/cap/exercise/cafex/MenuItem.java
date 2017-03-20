@@ -2,24 +2,30 @@ package com.cap.exercise.cafex;
 
 public enum MenuItem {
 
-	Cola(DrinkFoodType.COLD, 50),
-	Coffee(DrinkFoodType.HOT, 100),
-	CheeseSandwich(DrinkFoodType.COLD, 200),
-	SteakSandwich(DrinkFoodType.HOT, 450);
+	Cola(ItemType.Drink, DrinkFoodType.COLD, 50),
+	Coffee(ItemType.Drink, DrinkFoodType.HOT, 100),
+	CheeseSandwich(ItemType.Food, DrinkFoodType.COLD, 200),
+	SteakSandwich(ItemType.Food, DrinkFoodType.HOT, 450);
 
-	DrinkFoodType type;
+	ItemType itemType;
+	DrinkFoodType typeOfFoodDrink;
 	int priceInPence;
 
-	public DrinkFoodType getType() {
-		return type;
+	public ItemType getItemType() {
+		return itemType;
+	}
+
+	public DrinkFoodType getFoodDrinkType() {
+		return typeOfFoodDrink;
 	}
 
 	public int getPriceInPence() {
 		return priceInPence;
 	}
 
-	MenuItem(DrinkFoodType type, int price) {
-		this.type = type;
+	MenuItem(ItemType itemType, DrinkFoodType type, int price) {
+		this.itemType = itemType;
+		this.typeOfFoodDrink = type;
 		this.priceInPence = price;
 	}
 }
