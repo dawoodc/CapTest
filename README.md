@@ -28,3 +28,10 @@ Method calculateServiceCharge has the service charging rules.
 Method getTotalBill gives you the rounded total after adding the service charge component.
 
 The tests added cover all scenarios.
+
+
+Test
+====
+
+If you mvn installed on your machine please use the following commnd to run all the junit test
+>mvn test
